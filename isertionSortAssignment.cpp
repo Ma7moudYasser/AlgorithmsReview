@@ -5,8 +5,8 @@ void insertionSort(int arr[], int n) {
 	for (j = 1; j < n; j++) {
 		key = arr[j];
 		i = j - 1;
-		while (i >= 0 && arr[i] > key) {
-			arr[i + 1] = arr[i];
+		while (i >= 0 && arr[i] < key) {
+			arr[i+1] = arr[i];
 			i--;
 		}
 		arr[i + 1] = key;
@@ -30,3 +30,4 @@ int main() {
 	return 0;
 
 }
+//Not the question was to sort in decending order so I just changed the sign in the while condition.
